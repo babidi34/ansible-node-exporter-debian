@@ -1,0 +1,8 @@
+---
+
+- name: install node exporter
+  hosts: all
+  become: yes
+  roles:
+    - node-exporter-centos
+    - node-exporter-debian

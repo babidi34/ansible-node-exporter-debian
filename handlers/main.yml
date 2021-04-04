@@ -1,0 +1,14 @@
+---
+# handlers file for node-exporter
+
+- name: reload_daemon_and_restart_node_exporter
+  systemd:
+    name: node_exporter
+    state: restarted
+    enabled: yes
+
+- name: reload_firewalld
+  systemd:
+    name: firewalld
+    state: reloaded
+    enabled: yes
